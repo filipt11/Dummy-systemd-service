@@ -1,0 +1,13 @@
+[Unit]
+Description=The test dummy service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/dummy.sh
+Restart=always
+StandardOutput=append:/var/log/dummy.log
+StandardError=append:/var/log/dummy.log
+
+[Install]
+WantedBy=multi-user.target
+
